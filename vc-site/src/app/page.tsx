@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Vortex } from "@/components/vortex";
 import { TextEffect } from "@/components/core/text-effect";
 import SOPHONLOGO from "@/assets/sophon-logo.png";
@@ -20,10 +21,12 @@ export default function Home() {
       <div className="min-h-screen flex flex-col text-white p-6 md:p-8">
         {/* Main content */}
         <main className="flex-1 flex flex-col justify-center max-w-3xl pl-1">
-          <div className="flex items-center gap-2 mb-4">
-            <img
-              src={SOPHONLOGO.src}
+          <div className="flex items-center gap-3 mb-4">
+            <Image
+              src={SOPHONLOGO}
               alt="Sophon Logo"
+              width={40}
+              height={40}
               className="w-8 h-8 md:w-10 md:h-10"
             />
             <h2 className="font-bold text-2xl tracking-wider">
@@ -45,7 +48,16 @@ export default function Home() {
             </p>
             <p className="text-base md:text-lg opacity-90 max-w-xl">
               Primarily looking at projects in the Solana ecosystem, but eager
-              to hearing what you are building!
+              to hear what you&apos;re building!
+            </p>
+            <p className="text-base md:text-lg opacity-90 max-w-xl">
+              Forward pitches to{" "}
+              <a
+                href="mailto:michael@sophonventures.com"
+                className="underline text-blue-600 hover:text-blue-800"
+              >
+                michael@sophonventures.com
+              </a>
             </p>
           </div>
         </main>
@@ -54,22 +66,6 @@ export default function Home() {
         <footer className="mt-auto pt-4">
           <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs opacity-70">
             <span>© 2025 Sophon Technology Services LLC</span>
-            {/* <span className="hidden sm:inline">|</span>
-            <Link href="#" className="hover:opacity-100">
-              Terms
-            </Link>
-            <span className="hidden sm:inline">|</span>
-            <Link href="#" className="hover:opacity-100">
-              Privacy Policy
-            </Link>
-            <span className="hidden sm:inline">|</span>
-            <Link href="#" className="hover:opacity-100">
-              Cookie Policy
-            </Link>
-            <span className="hidden sm:inline">|</span>
-            <Link href="#" className="hover:opacity-100">
-              Cookie Settings
-            </Link> */}
           </div>
         </footer>
       </div>
